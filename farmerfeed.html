@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Crofters</title>
+    <link rel="stylesheet" href="css/stylefeed.css" />
+    <link rel="icon" href="images/icon/logo.png" type="image/png">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+</head>
+
+<body>
+    <div class="header1">
+        <a href="farmerfeed.html" class="logo"><img src="images/profilesamp.png" alt="Profile" />
+        </a>
+        <div class="navigation1" id="navLinks">
+            <ul class="menu1">
+                <li class="menu-item1">
+                    <a href="#"><i class="fa fa-shopping-cart"></i>Listings</a>
+                </li>
+                <li class="menu-item1">
+                    <a href="farmerfeed.html"><i class="fa fa-home"></i>Home</a>
+                </li>
+                <li class="menu-item1">
+                    <a href="index.html"><i class="fa fa-sign-out"></i>Sign out</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- TOP NAV -->
+
+    <div id="portfolio" class="text-center paddsection">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <input id="myinput" type="text" placeholder="Search Location or Food" class="form-control"><br><br>
+
+                    <div class="portfolio-container" id="card">
+
+                        <div class="col-md-3 portfolio-thumbnail">
+                            <div class="card" id="card">
+                                <img src="images/farmer/food1.png" style="width: 100%">
+                                <h4><b>Cabbage</b></h4>
+                                <p>Manila, Philippines</p>
+                            </div>
+                        </div>
+
+                        <div class="col-md-3 portfolio-thumbnail  ">
+                            <div class="card" id="card">
+                                <img src="images/farmer/food2.png" style="width: 100%">
+                                <h4><b>Carrots</b></h4>
+                                <p>Manila, Philippines</p>
+                            </div>
+                        </div>
+
+                        <div class="col-md-3 portfolio-thumbnail  ">
+                            <div class="card" id="card">
+                                <img src="images/farmer/food3.png" style="width: 100%">
+                                <h4><b>Banana</b></h4>
+                                <p>Batangas, Philippines</p>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+    <script>
+        $(document).ready(function() {
+            $("#myinput").on("keyup", function() {
+                var value = $(this).val().toLowerCase();
+                $("#card div").filter(function() {
+                    $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1);
+
+                });
+            });
+        });
+    </script>
+
+</body>
+
+</html>
